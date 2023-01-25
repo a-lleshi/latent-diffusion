@@ -194,3 +194,4 @@ $RECYCLE.BIN/
 *.lnk
 
 # py -3 -m venv .venv
+*.zip
