@@ -24,58 +24,65 @@ from ldm.util import instantiate_from_config
 def get_parser():
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "-r",
-        "--resume",
+        "-t",
+        "--test",
         type=str,
         nargs="?",
-        help="load from logdir or checkpoint in logdir",
+        help="test file",
     )
-    parser.add_argument(
-        "-n",
-        "--n_samples",
-        type=int,
-        nargs="?",
-        help="number of samples to draw",
-        default=50000
-    )
-    parser.add_argument(
-        "-e",
-        "--eta",
-        type=float,
-        nargs="?",
-        help="eta for ddim sampling (0.0 yields deterministic sampling)",
-        default=1.0
-    )
-    parser.add_argument(
-        "-v",
-        "--vanilla_sample",
-        default=False,
-        action='store_true',
-        help="vanilla sampling (default option is DDIM sampling)?",
-    )
-    parser.add_argument(
-        "-l",
-        "--logdir",
-        type=str,
-        nargs="?",
-        help="extra logdir",
-        default="none"
-    )
-    parser.add_argument(
-        "-c",
-        "--custom_steps",
-        type=int,
-        nargs="?",
-        help="number of steps for ddim and fastdpm sampling",
-        default=50
-    )
-    parser.add_argument(
-        "--batch_size",
-        type=int,
-        nargs="?",
-        help="the bs",
-        default=10
-    )
+    # parser.add_argument(
+    #     "-r",
+    #     "--resume",
+    #     type=str,
+    #     nargs="?",
+    #     help="load from logdir or checkpoint in logdir",
+    # )
+    # parser.add_argument(
+    #     "-n",
+    #     "--n_samples",
+    #     type=int,
+    #     nargs="?",
+    #     help="number of samples to draw",
+    #     default=50000
+    # )
+    # parser.add_argument(
+    #     "-e",
+    #     "--eta",
+    #     type=float,
+    #     nargs="?",
+    #     help="eta for ddim sampling (0.0 yields deterministic sampling)",
+    #     default=1.0
+    # )
+    # parser.add_argument(
+    #     "-v",
+    #     "--vanilla_sample",
+    #     default=False,
+    #     action='store_true',
+    #     help="vanilla sampling (default option is DDIM sampling)?",
+    # )
+    # parser.add_argument(
+    #     "-l",
+    #     "--logdir",
+    #     type=str,
+    #     nargs="?",
+    #     help="extra logdir",
+    #     default="none"
+    # )
+    # parser.add_argument(
+    #     "-c",
+    #     "--custom_steps",
+    #     type=int,
+    #     nargs="?",
+    #     help="number of steps for ddim and fastdpm sampling",
+    #     default=50
+    # )
+    # parser.add_argument(
+    #     "--batch_size",
+    #     type=int,
+    #     nargs="?",
+    #     help="the bs",
+    #     default=10
+    # )
     return parser
 
 
